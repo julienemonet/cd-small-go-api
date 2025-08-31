@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: small-go-api
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: small-go-api
+  template:
+    metadata:
+      labels:
+        app: small-go-api
+    spec:
+      containers:
+        - image: ghcr.io/julienemonet/small-go-api:1756537339
+          name: small-go-api
+          ports:
+            - containerPort: 9090
