@@ -14,7 +14,7 @@ spec:
         app: small-go-api
     spec:
       containers:
-        - image: ghcr.io/julienemonet/small-go-api:1756537339
+        - image: ghcr.io/julienemonet/small-go-api:placeholder
           name: small-go-api
           ports:
             - containerPort: 9090
